@@ -116,3 +116,4 @@ media/*
 # misc
 .DS_Store
 *.pyc
+__pycache__/*
