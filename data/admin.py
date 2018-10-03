@@ -1,6 +1,11 @@
 from django.contrib import admin
 
-from .models import Game, Item, ItemVersion
+from .models import (
+    Game,
+    Item,
+    ItemVersion,
+    Patch,
+)
 # Register your models here.
 
 @admin.register(Game)
@@ -13,4 +18,8 @@ class ItemAdmin(admin.ModelAdmin):
 
 @admin.register(ItemVersion)
 class ItemVersionAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Patch)
+class PatchAdmin(admin.ModelAdmin):
     pass
