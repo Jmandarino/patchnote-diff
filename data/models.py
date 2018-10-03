@@ -18,5 +18,7 @@ class ItemVersion(BaseModel):
     stats = JSONField(help_text='dictionary to keep track of item changes')
 
 
-
-
+class Patch(BaseModel):
+    date = models.DateTimeField(help_text='The date the patch was created')
+    version_number = models.CharField(max_length=15, help_text='a string representation of a patch version')
+    items = models.ManyToManyField('Item', blank=True, related_name='patch_items')
